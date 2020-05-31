@@ -31,9 +31,9 @@ def generate_prime(lower, upper):
 
 
 def generate_p_q():
-    p = generate_prime(100, 10000)
+    p = generate_prime(100, 100000)
     while True:
-        q = generate_prime(100, 10000)
+        q = generate_prime(100, 100000)
         if p != q:
             break
     return p, q
@@ -73,8 +73,9 @@ def main():
 
     e = generate_e(totient)
     d = generate_d(totient, e)
-    c = generate_c(1234, e, n)
-    print('Decrypted: ', decrypt(c, d, n))
+    c = generate_c(int(input('Message to encrypt: ')), e, n)
+    print('Encrypted: {}'.format(c))
+    print('Decrypted: {}'.format(decrypt(c, d, n)))
 
 
 main()
