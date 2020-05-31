@@ -47,8 +47,13 @@ def main():
 
     totient = (p - 1) * (q - 1)
     while True:
-        e = random.randint(2, totient - 1)
+        # Divides by 10000 to keep e down
+        e = random.randint(2, int((totient - 1) / 10000))
         if is_comprime(e, totient):
             break
 
     d = (1 % totient) / e
+    print(e)
+
+
+main()
