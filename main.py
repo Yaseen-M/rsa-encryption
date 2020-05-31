@@ -40,10 +40,11 @@ def generate_p_q():
 
 
 def generate_e(totient):
+    e = 2
     while True:
-        e = random.randint(2, 10)
         if is_comprime(e, totient):
             return e
+        e += 1
 
 
 def generate_d(totient, e):
