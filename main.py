@@ -39,21 +39,33 @@ def generate_p_q():
     return p, q
 
 
-def main():
-    p, q = generate_p_q()
-
-    # n is the modulus for the pub and priv keys
-    n = p * q
-
-    totient = (p - 1) * (q - 1)
+def generate_e(totient):
     while True:
         # Divides by 10000 to keep e down
         e = random.randint(2, int((totient - 1) / 10000))
         if is_comprime(e, totient):
-            break
+            return e
 
-    d = (1 % totient) / e
-    print(e)
+
+def generate_c(m, e, n):
+    return (m ** e) % n
+
+
+def main():
+    try:
+        p, q = generate_p_q()
+
+        # n is the modulus for the pub and priv keys
+        n = p * q
+
+        totient = (p - 1) * (q - 1)
+        e = generate_e(totient)
+        d = (1 % totient) / e
+
+        c = generate_c(12345, e, n)
+
+    except:
+        print('Uh oh. Something went wrong. Please try again...')
 
 
 main()
