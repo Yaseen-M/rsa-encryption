@@ -31,9 +31,9 @@ def generate_prime(lower, upper):
 
 
 def generate_p_q():
-    p = generate_prime(2, 20)
+    p = generate_prime(100, 10000)
     while True:
-        q = generate_prime(2, 20)
+        q = generate_prime(100, 10000)
         if p != q:
             break
     return p, q
@@ -48,20 +48,20 @@ def generate_e(totient):
 
 
 def generate_d(totient, e):
-    i = 1
+    k = 1
     while True:
-        d = (1 + (i * totient)) / e
+        d = (1 + (k * totient)) / e
         if d.is_integer():
-            return d
-        i += 1
+            return int(d)
+        k += 1
 
 
 def generate_c(m, e, n):
-    return (m ** e) % n
+    return (pow(m, e, n))
 
 
 def decrypt(c, d, n):
-    return (pow(c, d)) % n
+    return (pow(c, d, n))
 
 
 def main():
@@ -70,12 +70,11 @@ def main():
     # n is the modulus for the pub and priv keys
     n = p * q
     totient = (p - 1) * (q - 1)
+
     e = generate_e(totient)
     d = generate_d(totient, e)
-    c = generate_c(4, e, n)
-
-    print(c)
-    print(decrypt(c, d, n))
+    c = generate_c(1234, e, n)
+    print('Decrypted: ', decrypt(c, d, n))
 
 
 main()
