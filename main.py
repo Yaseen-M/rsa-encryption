@@ -73,7 +73,7 @@ def main():
 
     e = generate_e(totient)
     d = generate_d(totient, e)
-    c = generate_c(int(input('Message to encrypt: ')), e, n)
+    c = generate_c(int(input('Message to encrypt (numbers only): ')), e, n)
     print('Encrypted: {}'.format(c))
     print('Decrypted: {}'.format(decrypt(c, d, n)))
 
