@@ -31,9 +31,9 @@ def generate_prime(lower, upper):
 
 
 def generate_p_q():
-    p = generate_prime(100, 10000)
+    p = generate_prime(2, 20)
     while True:
-        q = generate_prime(100, 10000)
+        q = generate_prime(2, 20)
         if p != q:
             break
     return p, q
@@ -41,31 +41,40 @@ def generate_p_q():
 
 def generate_e(totient):
     while True:
-        # Divides by 10000 to keep e down
-        e = random.randint(2, int((totient - 1) / 10000))
+        e = random.randint(2, 10)
         if is_comprime(e, totient):
             return e
+
+
+def generate_d(totient, e):
+    i = 1
+    while True:
+        d = (1 + (i * totient)) / e
+        if d.is_integer():
+            return d
+        i += 1
 
 
 def generate_c(m, e, n):
     return (m ** e) % n
 
 
+def decrypt(c, d, n):
+    return (pow(c, d)) % n
+
+
 def main():
-    try:
-        p, q = generate_p_q()
+    p, q = generate_p_q()
 
-        # n is the modulus for the pub and priv keys
-        n = p * q
+    # n is the modulus for the pub and priv keys
+    n = p * q
+    totient = (p - 1) * (q - 1)
+    e = generate_e(totient)
+    d = generate_d(totient, e)
+    c = generate_c(4, e, n)
 
-        totient = (p - 1) * (q - 1)
-        e = generate_e(totient)
-        d = (1 % totient) / e
-
-        c = generate_c(12345, e, n)
-
-    except:
-        print('Uh oh. Something went wrong. Please try again...')
+    print(c)
+    print(decrypt(c, d, n))
 
 
 main()
