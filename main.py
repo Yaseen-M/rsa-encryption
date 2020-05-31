@@ -1,5 +1,4 @@
 import random
-import math
 
 
 def hcf(a, b):
@@ -30,10 +29,10 @@ def generate_prime(lower, upper):
             return n
 
 
-def generate_p_q():
-    p = generate_prime(100, 100000)
+def generate_p_q(length):
+    p = generate_prime(pow(10, 6), pow(10, 7))
     while True:
-        q = generate_prime(100, 100000)
+        q = generate_prime(pow(10, 6), pow(10, 7))
         if p != q:
             break
     return p, q
@@ -56,26 +55,51 @@ def generate_d(totient, e):
         k += 1
 
 
-def generate_c(m, e, n):
+def letter_to_num(letter):
+    return ord(letter)
+
+
+def message_to_num(message):
+    return list(map(letter_to_num, message))
+
+
+def get_message():
+    message = input('Message to encrypt: ').upper()
+    num_list = message_to_num(message)
+    return int(''.join(str(x) for x in num_list))
+
+
+def encrypt(m, e, n):
     return (pow(m, e, n))
 
 
+def num_to_message(num):
+    num = str(num)
+    message = ''.join([chr(int(num[i:i+2])) for i in range(0, len(num), 2)])
+    return message
+
+
 def decrypt(c, d, n):
-    return (pow(c, d, n))
+    num = (pow(c, d, n))
+    return num_to_message(num)
 
 
 def main():
-    p, q = generate_p_q()
+    try:
+        m = get_message()
+        p, q = generate_p_q(len(str(m)))
+        # n is the modulus for the pub and priv keys
+        n = p * q
+        totient = (p - 1) * (q - 1)
 
-    # n is the modulus for the pub and priv keys
-    n = p * q
-    totient = (p - 1) * (q - 1)
+        e = generate_e(totient)
+        d = generate_d(totient, e)
+        c = encrypt(m, e, n)
+        print('Encrypted: {}'.format(c))
+        print('Decrypted: {}'.format(decrypt(c, d, n)))
 
-    e = generate_e(totient)
-    d = generate_d(totient, e)
-    c = generate_c(int(input('Message to encrypt (numbers only): ')), e, n)
-    print('Encrypted: {}'.format(c))
-    print('Decrypted: {}'.format(decrypt(c, d, n)))
+    except:
+        print('Uh oh! Something went wrong...')
 
 
 main()
