@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2020-06-01T14:24:23.758Z" agent="5.0 (X11; CrOS x86_64 12239.67.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.102 Safari/537.36" etag="iuLS3bnADET-d07oUgrs" version="13.1.11">
+  <diagram id="t7xrAZIuwRQ2pUY9Hfx0" name="Page-1">
+    <mxGraphModel dx="1736" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-30" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="246.99830985915492" y="83.0025" width="333.00169014084514" height="1002.9975" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-9" value="Message" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=20;" vertex="1" parent="WpFwJNRMsrZ_Jt-Hx9S5-30">
+          <mxGeometry x="104.06169014084509" width="124.875" height="124.875" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-17" value="" style="group;fontSize=20;" vertex="1" connectable="0" parent="WpFwJNRMsrZ_Jt-Hx9S5-30">
+          <mxGeometry x="43.81656763528537" y="279.12475" width="245.36966641957008" height="245.36842105263165" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-12" value="" style="group;fontSize=20;" vertex="1" connectable="0" parent="WpFwJNRMsrZ_Jt-Hx9S5-17">
+          <mxGeometry y="-3.5782894736842725" width="245.36966641957008" height="245.36842105263165" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-10" value="Locked with Bob&#39;s private key" style="whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;fontSize=20;" vertex="1" parent="WpFwJNRMsrZ_Jt-Hx9S5-12">
+          <mxGeometry y="-2.190789473684273" width="245.36842105263156" height="245.36842105263156" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-11" value="Message" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=20;" vertex="1" parent="WpFwJNRMsrZ_Jt-Hx9S5-12">
+          <mxGeometry x="60.247016308376594" y="60.2467105263158" width="124.875" height="124.875" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=20;" edge="1" parent="WpFwJNRMsrZ_Jt-Hx9S5-30" source="WpFwJNRMsrZ_Jt-Hx9S5-9" target="WpFwJNRMsrZ_Jt-Hx9S5-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-22" value="" style="group;fontSize=20;" vertex="1" connectable="0" parent="WpFwJNRMsrZ_Jt-Hx9S5-30">
+          <mxGeometry y="669.9975" width="333.0016901408451" height="333" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-18" value="" style="group;fontSize=20;" vertex="1" connectable="0" parent="WpFwJNRMsrZ_Jt-Hx9S5-22">
+          <mxGeometry y="-0.0024999999999999467" width="333.0016901408451" height="333" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-19" value="Locked with Alice&#39;s public key" style="whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=20;" vertex="1" parent="WpFwJNRMsrZ_Jt-Hx9S5-18">
+          <mxGeometry y="1.3875" width="333" height="333" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-20" value="Locked with Bob&#39;s private key" style="whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;fontSize=20;" vertex="1" parent="WpFwJNRMsrZ_Jt-Hx9S5-18">
+          <mxGeometry x="43.816011860637495" y="45.7875" width="245.36842105263156" height="245.36842105263156" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-21" value="Message" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=20;" vertex="1" parent="WpFwJNRMsrZ_Jt-Hx9S5-18">
+          <mxGeometry x="104.06302816901409" y="109.6125" width="124.875" height="124.875" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=20;" edge="1" parent="WpFwJNRMsrZ_Jt-Hx9S5-30" source="WpFwJNRMsrZ_Jt-Hx9S5-10" target="WpFwJNRMsrZ_Jt-Hx9S5-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
