@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2020-06-01T14:35:28.577Z" agent="5.0 (X11; CrOS x86_64 12239.67.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.102 Safari/537.36" etag="eoLQNElt7nO2wqNbCDrH" version="13.1.11">
+  <diagram id="t7xrAZIuwRQ2pUY9Hfx0" name="Page-1">
+    <mxGraphModel dx="868" dy="434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-9" value="Message" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="351.06" y="1013.7625" width="124.875" height="124.875" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-17" value="" style="group;fontSize=20;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="290.5048774944403" y="573.75725" width="268.9951225055597" height="245.36842105263165" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-12" value="" style="group;fontSize=20;" parent="WpFwJNRMsrZ_Jt-Hx9S5-17" vertex="1" connectable="0">
+          <mxGeometry y="-3.5782894736842725" width="268.9951225055597" height="245.36842105263165" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-10" value="Locked with Bob&#39;s private key" style="whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;fontSize=20;" parent="WpFwJNRMsrZ_Jt-Hx9S5-12" vertex="1">
+          <mxGeometry y="-2.190789473684273" width="245.36842105263156" height="245.36842105263156" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-11" value="Message" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=20;" parent="WpFwJNRMsrZ_Jt-Hx9S5-12" vertex="1">
+          <mxGeometry x="60.247016308376594" y="60.2467105263158" width="124.875" height="124.875" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-22" value="" style="group;fontSize=20;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="246.99830985915492" y="31.000000000000007" width="333.0016901408451" height="333" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-18" value="" style="group;fontSize=20;" parent="WpFwJNRMsrZ_Jt-Hx9S5-22" vertex="1" connectable="0">
+          <mxGeometry y="-0.0024999999999999467" width="333.0016901408451" height="333" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-19" value="Locked with Alice&#39;s public key" style="whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=20;" parent="WpFwJNRMsrZ_Jt-Hx9S5-18" vertex="1">
+          <mxGeometry y="1.3875" width="333" height="333" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-20" value="Locked with Bob&#39;s private key" style="whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;fontSize=20;" parent="WpFwJNRMsrZ_Jt-Hx9S5-18" vertex="1">
+          <mxGeometry x="43.816011860637495" y="45.7875" width="245.36842105263156" height="245.36842105263156" as="geometry" />
+        </mxCell>
+        <mxCell id="WpFwJNRMsrZ_Jt-Hx9S5-21" value="Message" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=20;" parent="WpFwJNRMsrZ_Jt-Hx9S5-18" vertex="1">
+          <mxGeometry x="104.06302816901409" y="109.6125" width="124.875" height="124.875" as="geometry" />
+        </mxCell>
+        <mxCell id="7C3PJVRKWBQ4hdoPeWlo-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=21;" edge="1" parent="1" source="7C3PJVRKWBQ4hdoPeWlo-2" target="WpFwJNRMsrZ_Jt-Hx9S5-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7C3PJVRKWBQ4hdoPeWlo-2" value="Unlocked with Alice&#39;s private key" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="288.19" y="440" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7C3PJVRKWBQ4hdoPeWlo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=21;" edge="1" parent="1" source="WpFwJNRMsrZ_Jt-Hx9S5-19" target="7C3PJVRKWBQ4hdoPeWlo-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7C3PJVRKWBQ4hdoPeWlo-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=21;" edge="1" parent="1" source="7C3PJVRKWBQ4hdoPeWlo-5" target="WpFwJNRMsrZ_Jt-Hx9S5-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7C3PJVRKWBQ4hdoPeWlo-5" value="Unlocked with Bob&#39;s primary key" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="288.19" y="880.0000000000001" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7C3PJVRKWBQ4hdoPeWlo-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=21;" edge="1" parent="1" source="WpFwJNRMsrZ_Jt-Hx9S5-10" target="7C3PJVRKWBQ4hdoPeWlo-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
