@@ -30,9 +30,9 @@ def generate_prime(lower, upper):
 
 
 def generate_p_q():
-    p = generate_prime(pow(10, 6), pow(10, 7))
+    p = generate_prime(pow(10, 2), pow(10, 4))
     while True:
-        q = generate_prime(pow(10, 6), pow(10, 7))
+        q = generate_prime(pow(10, 2), pow(10, 4))
         if p != q:
             break
     return p, q
@@ -55,18 +55,18 @@ def generate_d(totient, e):
         k += 1
 
 
-def letter_to_num(letter):
+def letter_to_ascii(letter):
     return ord(letter)
 
 
 def message_to_num(message):
-    return list(map(letter_to_num, message))
+    return list(map(letter_to_ascii, message))
 
 
 def get_message():
     message = input('Message to encrypt: ').upper()
     num_list = message_to_num(message)
-    return int(''.join(str(x) for x in num_list))
+    return [x for x in num_list]
 
 
 def encrypt(m, e, n):
@@ -86,17 +86,21 @@ def decrypt(c, d, n):
 
 def main():
     m = get_message()
+    # returns two large distinct primes
     p, q = generate_p_q()
     # n is the modulus for the pub and priv keys
     n = p * q
     totient = (p - 1) * (q - 1)
-
     e = generate_e(totient)
     d = generate_d(totient, e)
-    c = encrypt(m, e, n)
+    c = []
+    for num in m:
+        c.append(encrypt(num, e, n))
     print('Encrypted: {}'.format(c))
-    print('Decrypted: {}'.format(decrypt(c, d, n)))
+    decrypted = ''.join([decrypt(i, d, n) for i in c])
+    print('Decrypted: {}'.format(decrypted))
 
 
 if __name__ == "__main__":
+    # Only runs if program is run directly
     main()
