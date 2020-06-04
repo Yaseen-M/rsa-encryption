@@ -58,7 +58,7 @@ def generate_d(totient, e):
 
 
 def char_to_ascii(char):
-    return ord(char) if char != ' ' else char
+    return ord(char)
 
 
 def message_to_num(message):
@@ -72,10 +72,11 @@ def get_message():
         valid = True
         for char in message:
             if not 9 < ord(char) < 99:
-                print('Message contains invalid characters.')
                 valid = False
         if valid:
             break
+        print('Message contains invalid characters.')
+
     ascii_list = message_to_num(message)
     return ascii_list
 
@@ -86,12 +87,9 @@ def pad(message):
 
 
 def encrypt(m, e, n):
-    if m == ' ':
-        return m
-    else:
-        non_padded = pow(m, e, n)
-        # Returns padded number
-        return pad(non_padded)
+    non_padded = pow(m, e, n)
+    # Returns padded number
+    return pad(non_padded)
 
 
 def num_to_message(num):
@@ -102,12 +100,9 @@ def num_to_message(num):
 
 
 def decrypt(c, d, n):
-    if c == ' ':
-        return c
-    else:
-        unpadded = int(str(c)[2:-2])
-        num = (pow(unpadded, d, n))
-        return num_to_message(num)
+    unpadded = int(str(c)[2:-2])
+    num = (pow(unpadded, d, n))
+    return num_to_message(num)
 
 
 def main():
@@ -125,6 +120,6 @@ def main():
     print('Decrypted: {}'.format(decrypted))
 
 
+# Only runs if program is run directly
 if __name__ == "__main__":
-    # Only runs if program is run directly
     main()
