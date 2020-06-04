@@ -29,7 +29,7 @@ def generate_prime(lower, upper):
             return n
 
 
-def generate_p_q(length):
+def generate_p_q():
     p = generate_prime(pow(10, 6), pow(10, 7))
     while True:
         q = generate_prime(pow(10, 6), pow(10, 7))
@@ -86,7 +86,7 @@ def decrypt(c, d, n):
 
 def main():
     m = get_message()
-    p, q = generate_p_q(len(str(m)))
+    p, q = generate_p_q()
     # n is the modulus for the pub and priv keys
     n = p * q
     totient = (p - 1) * (q - 1)
