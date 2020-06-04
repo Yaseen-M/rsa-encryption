@@ -2,6 +2,7 @@ import random
 
 
 def hcf(a, b):
+    # Returns highest common factor
     while b != 0:
         a, b = b, a % b
     return a
@@ -30,6 +31,7 @@ def generate_prime(lower, upper):
 
 
 def generate_p_q():
+    # Returns two distinct primes
     p = generate_prime(pow(10, 2), pow(10, 4))
     while True:
         q = generate_prime(pow(10, 2), pow(10, 4))
@@ -60,13 +62,14 @@ def letter_to_ascii(letter):
 
 
 def message_to_num(message):
+    # Converts a message to list of ascii numbers
     return list(map(letter_to_ascii, message))
 
 
 def get_message():
-    message = input('Message to encrypt: ').upper()
-    num_list = message_to_num(message)
-    return num_list
+    message = input('Message to encrypt: ').replace(' ', '').upper()
+    ascii_list = message_to_num(message)
+    return ascii_list
 
 
 def encrypt(m, e, n):
@@ -87,7 +90,7 @@ def decrypt(c, d, n):
 
 def main():
     m = get_message()
-    # returns two large distinct primes
+    # Returns two distinct primes
     p, q = generate_p_q()
     # n is the modulus for the pub and priv keys
     n = p * q
