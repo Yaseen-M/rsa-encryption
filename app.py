@@ -69,6 +69,8 @@ def message_to_num(message):
 def get_message():
     while True:
         message = input('Message to encrypt: ').upper()
+        # Checks if message contains invalid char
+        # If message is invalid while loop starts again
         valid = True
         for char in message:
             if not 9 < ord(char) < 99:
@@ -76,7 +78,6 @@ def get_message():
         if valid:
             break
         print('Message contains invalid characters.')
-
     ascii_list = message_to_num(message)
     return ascii_list
 
@@ -93,7 +94,6 @@ def encrypt(m, e, n):
 
 
 def num_to_message(num):
-    num = str(num)
     # Converts string of ascii numbers to string of corresponding letters
     message = ''.join([chr(int(num[i:i+2])) for i in range(0, len(num), 2)])
     return message
@@ -102,7 +102,7 @@ def num_to_message(num):
 def decrypt(c, d, n):
     unpadded = int(str(c)[2:-2])
     num = (pow(unpadded, d, n))
-    return num_to_message(num)
+    return num_to_message(str(num))
 
 
 def main():
@@ -114,8 +114,10 @@ def main():
     totient = (p - 1) * (q - 1)
     e = generate_e(totient)
     d = generate_d(totient, e)
+    # Stores list of encrypted chars
     c = [encrypt(num, e, n) for num in m]
     print('Encrypted: {}'.format(c))
+    # Decrypts list of encrypted chars
     decrypted = ''.join([decrypt(i, d, n) for i in c])
     print('Decrypted: {}'.format(decrypted))
 
