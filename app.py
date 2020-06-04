@@ -72,10 +72,15 @@ def get_message():
     return ascii_list
 
 
+def pad(message):
+    # Pads encrypted message with a 2 digit random number at the front and back
+    return int(str(random.randint(10, 19)) + str(message) + str(random.randint(10, 19)))
+
+
 def encrypt(m, e, n):
     non_padded = pow(m, e, n)
     # Returns padded number
-    return int(str(random.randint(10, 19)) + str(non_padded) + str(random.randint(10, 19)))
+    return pad(non_padded)
 
 
 def num_to_message(num):
