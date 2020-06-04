@@ -85,21 +85,18 @@ def decrypt(c, d, n):
 
 
 def main():
-    try:
-        m = get_message()
-        p, q = generate_p_q(len(str(m)))
-        # n is the modulus for the pub and priv keys
-        n = p * q
-        totient = (p - 1) * (q - 1)
+    m = get_message()
+    p, q = generate_p_q(len(str(m)))
+    # n is the modulus for the pub and priv keys
+    n = p * q
+    totient = (p - 1) * (q - 1)
 
-        e = generate_e(totient)
-        d = generate_d(totient, e)
-        c = encrypt(m, e, n)
-        print('Encrypted: {}'.format(c))
-        print('Decrypted: {}'.format(decrypt(c, d, n)))
-
-    except:
-        print('Uh oh! Something went wrong...')
+    e = generate_e(totient)
+    d = generate_d(totient, e)
+    c = encrypt(m, e, n)
+    print('Encrypted: {}'.format(c))
+    print('Decrypted: {}'.format(decrypt(c, d, n)))
 
 
-main()
+if __name__ == "__main__":
+    main()
