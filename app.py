@@ -66,7 +66,7 @@ def message_to_num(message):
 def get_message():
     message = input('Message to encrypt: ').upper()
     num_list = message_to_num(message)
-    return [x for x in num_list]
+    return num_list
 
 
 def encrypt(m, e, n):
@@ -75,6 +75,7 @@ def encrypt(m, e, n):
 
 def num_to_message(num):
     num = str(num)
+    # Converts string of ascii numbers to string of corresponding letters
     message = ''.join([chr(int(num[i:i+2])) for i in range(0, len(num), 2)])
     return message
 
