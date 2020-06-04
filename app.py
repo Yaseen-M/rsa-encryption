@@ -73,7 +73,9 @@ def get_message():
 
 
 def encrypt(m, e, n):
-    return (pow(m, e, n))
+    non_padded = pow(m, e, n)
+    # Returns padded number
+    return int(str(random.randint(10, 19)) + str(non_padded) + str(random.randint(10, 19)))
 
 
 def num_to_message(num):
@@ -84,7 +86,8 @@ def num_to_message(num):
 
 
 def decrypt(c, d, n):
-    num = (pow(c, d, n))
+    unpadded = int(str(c)[2:-2])
+    num = (pow(unpadded, d, n))
     return num_to_message(num)
 
 
@@ -97,9 +100,7 @@ def main():
     totient = (p - 1) * (q - 1)
     e = generate_e(totient)
     d = generate_d(totient, e)
-    c = []
-    for num in m:
-        c.append(encrypt(num, e, n))
+    c = [encrypt(num, e, n) for num in m]
     print('Encrypted: {}'.format(c))
     decrypted = ''.join([decrypt(i, d, n) for i in c])
     print('Decrypted: {}'.format(decrypted))
